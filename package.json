@@ -11,20 +11,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.8.0"
+    "nuxt": "^3.15.1"
   },
   "dependencies": {
-    "@nuxtjs/google-fonts": "^3.0.2",
-    "@vueuse/core": "^10.5.0",
-    "@vueuse/nuxt": "^10.5.0",
     "@iconify-json/ion": "^1.1.12",
     "@nuxt/content": "^2.9.0",
-    "@nuxt/ui": "^2.10.0",
+    "@nuxt/icon": "^1.10.3",
+    "@nuxt/ui": "^2.20.0",
+    "@nuxtjs/google-fonts": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
     "@popperjs/core": "^2.11.8",
+    "@vueuse/core": "^10.5.0",
+    "@vueuse/nuxt": "^10.5.0",
     "pinia": "^2.1.7",
     "remove-title-name-ts": "^1.0.1",
-    "sass": "^1.69.4",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
     "v-calendar": "^3.1.2",
     "vue3-apexcharts": "^1.4.4",
     "vue3-singleton-component": "^1.0.0",

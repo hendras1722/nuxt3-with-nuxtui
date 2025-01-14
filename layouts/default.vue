@@ -28,32 +28,16 @@ nuxtApp.hook('page:finish', () => {
         <div class="grid grid-cols-12 grid-rows-1 gap-4">
           <div class="col-span-12">
             <UContainer
-              class="mt-4 px-3 py-5 max-w-full bg-white shadow-md rounded-lg dark:bg-gray-900 dark:text-white dark:border dark:border-white"
-            >
-              <div
-                v-show="loadingSkeleton"
-                role="status"
-                class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center"
-              >
+              class="mt-4 px-3 py-5 max-w-full bg-white shadow-md rounded-lg dark:bg-gray-900 dark:text-white dark:border dark:border-white">
+              <div v-show="loadingSkeleton"
+                class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center">
                 <div class="w-full">
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 max-w-[480px] mb-2.5"
-                  ></div>
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"
-                  ></div>
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"
-                  ></div>
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"
-                  ></div>
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"
-                  ></div>
-                  <div
-                    class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"
-                  ></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 max-w-[480px] mb-2.5"></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"></div>
+                  <div class="h-5 bg-gray-200 rounded dark:bg-gray-700 mb-2.5"></div>
                 </div>
                 <span class="sr-only">Loading...</span>
               </div>

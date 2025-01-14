@@ -4,15 +4,21 @@ export default defineNuxtConfig({
     rootId: 'MSA',
     rootTag: 'MSA',
   },
-  ui: {
-    icons: ['ion'],
+
+  icon: {
+    serverBundle: {
+      collections: ['ion'], // <!--- this
+    },
   },
+
   devtools: { enabled: true, vscode: {} },
+
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
     '@vueuse/nuxt',
     '@nuxt/devtools',
+    '@nuxt/icon',
     [
       '@nuxtjs/google-fonts',
       {
@@ -30,8 +36,12 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
   css: ['~/assets/scss/main.scss'],
+
   colorMode: {
     preference: 'light',
   },
+
+  compatibilityDate: '2025-01-14',
 })

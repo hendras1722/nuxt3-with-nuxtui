@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div
-      class="sm:block hidden min-h-screen w-52 sm:static absolute sm:z-0 z-50 duration-100 dark:bg-gray-900"
-      id="sidebar"
-    >
+    <div class="sm:block hidden min-h-screen w-52 sm:static absolute sm:z-0 z-50 duration-100 dark:bg-gray-900"
+      id="sidebar">
       <div>
         <div class="flex justify-center items-center my-3 h-14 overflow-hidden">
           <div>
@@ -13,44 +11,24 @@
           </div>
         </div>
         <div class="overflow-auto max-h-[calc(100vh-80px)] pb-3">
-          <div
-            v-for="(itemMenu, i) in items"
-            :key="`sidebar-${itemMenu.label} + ${i}`"
-            class="px-3"
-          >
-            <div
-              v-if="itemMenu.title"
-              class="pl-3 pb-3 text-sm font-bold sm:block last:mt-3"
-            >
+          <div v-for="(itemMenu, i) in items" :key="`sidebar-${itemMenu.label} + ${i}`" class="px-3">
+            <div v-if="itemMenu.title" class="pl-3 pb-3 text-sm font-bold sm:block last:mt-3">
               {{ itemMenu.title }}
             </div>
-            <div
-              v-if="itemMenu.children && itemMenu.children?.length < 1"
-              class="p-3 rounded-xl"
-            >
+            <div v-if="itemMenu.children && itemMenu.children?.length < 1" class="p-3 rounded-xl">
               <NuxtLink :to="itemMenu.to" v-slot="{ href, isActive }" custom>
-                <UButton
-                  class="dark:bg-gray-800 dark:text-white text-black w-full bg-white rounded-2xl shadow-lg"
-                  :ui="{ rounded: 'rounded-none', padding: { sm: 'p-3' } }"
-                  @click="handleAccordion(href)"
-                  :class="[isActive && 'text-black bg-gray-200 ']"
-                >
-                  <UIcon
-                    :name="itemMenu.icon"
-                    :class="[isActive && 'text-blue-500 text-md']"
-                    class="text-md"
-                  />
+                <UButton class="dark:bg-gray-800 dark:text-white text-black w-full bg-white rounded-2xl shadow-lg"
+                  :ui="{ rounded: 'rounded-none', padding: { sm: 'p-3' } }" @click="handleAccordion(href)"
+                  :class="[isActive && 'text-black bg-gray-200 ']">
+                  <UIcon :name="itemMenu.icon" :class="[isActive && 'text-blue-500 text-md']" class="text-md" />
                   <span class="sm:block">
                     {{ itemMenu.label }}
                   </span>
                 </UButton>
               </NuxtLink>
             </div>
-            <div v-else class="p-3 rounded-xl">
-              <AccordionTree
-                ref="accordion"
-                :itemMenu="itemMenu"
-              ></AccordionTree>
+            <div v-else-if="itemMenu.children && itemMenu.children?.length > 0" class="p-3 rounded-xl">
+              <AccordionTree ref="accordion" :itemMenu="itemMenu"></AccordionTree>
             </div>
           </div>
         </div>
@@ -71,7 +49,8 @@ const route = useRoute()
 
 const { stateLink } = storeToRefs(useBreadcumbStore())
 
-const items = ref(appConfig.menu)
+const items = ref()
+items.value = appConfig.menu
 const accordion = ref()
 
 watch(
