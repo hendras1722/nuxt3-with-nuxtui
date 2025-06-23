@@ -1,0 +1,15 @@
+
+.form-input {
+  @apply pl-12;
+}
+div.button_custom > input {
+  & + span {
+    & span {
+      @apply text-white #{!important};
+    }
+    @apply h-fit p-[6px] #{!important} ;
+    @apply rounded-tl-md rounded-bl-md ;
+    @apply text-white  #{!important};
+    @apply bg-blue-500 #{!important};
+  }
+}

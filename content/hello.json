@@ -1,0 +1,11 @@
+{
+  "title": "My Directory",
+  "_path": "/my-directory",
+  "children": [
+    {
+      "title": "Page title",
+      "_path": "/my-directory/my-page",
+      "_id": "content:my-directory:page.md"
+    }
+  ]
+}

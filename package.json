@@ -1,0 +1,51 @@
+{
+  "name": "msa-template-nuxt3",
+  "private": false,
+  "type": "module",
+  "version": "2.0.2",
+  "engines": {
+    "node": ">= 20.x"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.15.1"
+  },
+  "dependencies": {
+    "@iconify-json/ion": "^1.1.12",
+    "@nuxt/content": "^3.6.1",
+    "@nuxt/icon": "^1.10.3",
+    "@nuxt/ui": "^3.1.3",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@popperjs/core": "^2.11.8",
+    "@vueuse/core": "^10.5.0",
+    "@vueuse/nuxt": "^10.5.0",
+    "better-sqlite3": "^11.10.0",
+    "date-fns": "^2.30.0",
+    "pinia": "^2.1.7",
+    "remove-title-name-ts": "^1.0.1",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "v-calendar": "^3.1.2",
+    "vue3-apexcharts": "^1.4.4",
+    "vue3-singleton-component": "^1.0.0",
+    "yup": "^1.3.2"
+  },
+  "homepage": "https://syahendra.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendras1722/nuxt3-with-nuxtui.git"
+  },
+  "description": "Nuxt 3 boilerplate using Nuxt UI. this is just a personal project. i only publish my own boilerplate so that it can be used immediately.",
+  "bugs": {
+    "url": "https://github.com/hendras1722/nuxt3-with-nuxtui/issues"
+  },
+  "author": "Muh Syahendra A (MSA)",
+  "license": "ISC"
+}
